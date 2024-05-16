@@ -6,7 +6,7 @@ The program is a personal contact manager. Each user needs a login. If someone d
 
 ## Demo
 
-https://pastelparadise.xyz
+http://pastelparadise.xyz
 
 
 ## Authors
