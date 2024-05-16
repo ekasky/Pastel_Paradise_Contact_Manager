@@ -16,5 +16,5 @@ https://pastelparadise.xyz
 - [API: Docteur, Daryl]()
 - [Database: Nguyen, Andrew]()
 - [Frontend: Rivera Hernandez, Tabbatha]()
-- [API: Vaden, Noah]()
+- [API: Vaden, Noah](https://github.com/Vryllon/)
 
