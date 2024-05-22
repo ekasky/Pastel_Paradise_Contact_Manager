@@ -12,7 +12,7 @@ http://pastelparadise.xyz
 ## Authors
 
 - [Project Manager: Kasky, Evan](https://github.com/ekasky/)
-- [Frontend: Belal, Sara]()
+- [Frontend: Belal, Sara](https://github.com/stannie64)
 - [API: Docteur, Daryl]()
 - [Database: Nguyen, Andrew]()
 - [Frontend: Rivera Hernandez, Tabbatha]()
