@@ -124,14 +124,14 @@ will be finishing it todayyy */
   width: 70%;
   display: flex;
   justify-content: space-between;
-  margin: 5px 0px;
 }
 
 .loginField {
   text-align: left;
-  padding: 5px;
+  margin: 5px;
+  height: 30px;
   border: 2px solid rgb(88, 64, 164);
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 #loginButton {
@@ -143,10 +143,6 @@ will be finishing it todayyy */
   text-align: center;
   border: 2px solid rgb(88, 64, 164);
   border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center middle;
-  justify-content: center;
   margin-top: 1vw;
   padding: 0.5em;
 }
