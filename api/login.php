@@ -2,7 +2,6 @@
 
 require_once '../vendor/autoload.php';
 use Firebase\JWT\JWT;
-include "../config.php";
 
 // Set the response headers to be JSON
 header('Content-type: application/json');
@@ -46,7 +45,7 @@ $username = $body_json['username'];
 $password = $body_json['password'];
 
 // Connect to the db
-$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+$conn = new mysqli(getenv('DB_HOST'), getenv('DB_USER'), getenv('DB_PASS'), getenv('DB_NAME'));
 
 if($conn->connect_error) {
 
@@ -103,7 +102,7 @@ $payload = [
 
 try {
     // Attempt to encode JWT
-    $jwt = JWT::encode($payload, $KEY, 'HS256');
+    $jwt = JWT::encode($payload, getenv('SECRET_KEY'), 'HS256');
 
     // Output JWT token
     echo $jwt;
