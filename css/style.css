@@ -1,0 +1,147 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e8b8ec;
+  background-image: url("bg-redo.png");
+  background-size: 20%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+.button {
+  background-color: #fcffa3;
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7c156d;
+  border: 5px solid #7c156d;
+  text-align: center;
+  border-radius: 10%;
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  align-items: center middle;
+  justify-content: center;
+  margin-top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+.button:hover {
+  background-color: #fcdca3;
+}
+
+.button:active {
+  background-color: rgb(255, 180, 125);
+  box-shadow: 2px 2px 5px 5px #7c156d;
+  color: white;
+}
+
+.verticalCenter {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontalCenter {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#imgLegKick {
+  width: 50vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#paradiseLogo {
+  height: 20vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* login take 2 ... below! */
+/* i will NOT let it take my code away again AHHHHHHHH */
+/* login code is currently incomplete and untested, 
+will be finishing it todayyy */
+
+#loginBackground {
+  background-color: rgb(188, 164, 255);
+}
+
+#loginWrapper {
+  background-color: rgb(255, 200, 164);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(88, 64, 164);
+  border: 5px solid rgb(88, 64, 164);
+  text-align: center;
+  border-radius: 10%;
+  display: flex;
+  width: 70vw;
+  height: 50vw;
+  flex-direction: column;
+  align-items: center middle;
+  justify-content: center;
+  margin-top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+#loginInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginRow {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.loginField {
+  text-align: left;
+  padding: 5px;
+  border: 2px solid var(--orange);
+  border-radius: 10%;
+}
+
+#loginButton {
+  background-color: rgb(200, 166, 255);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(88, 64, 164);
+  border: 5px solid rgb(88, 64, 164);
+  text-align: center;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center middle;
+  justify-content: center;
+  margin-top: 1vw;
+  padding: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+#loginButton:hover {
+  background-color: rgb(150, 125, 255);
+}
+
+#loginButton:active {
+  background-color: rgb(125, 100, 255);
+  color: white;
+  box-shadow: 2px 2px 5px 5px rgb(88, 64, 164);
+}
