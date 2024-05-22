@@ -1,5 +1,14 @@
 <?php
 
+// Get environment variables
+$envFile = "../.env";
+$envVar = parse_ini_file($envFile);
+
+$DB_HOST = $envVar['DB_HOST'];
+$DB_USER = $envVar['DB_USER'];
+$DB_PASS = $envVar['DB_PASS'];
+$DB_NAME = $envVar['DB_NAME'];
+
 // Set the response headers to be JSON
 header('Content-type: application/json');
 
@@ -52,7 +61,7 @@ $username = $body_json['username'];
 $password = $body_json['password'];
 
 // Connect to the db
-$conn = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV['DB_NAME']);
+$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 
 if($conn->connect_error) {
 
