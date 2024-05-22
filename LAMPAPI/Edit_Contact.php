@@ -1,7 +1,7 @@
 <?php
 
 // Make a connection to the database
-$conn = new mysqli('mysql', 'apiuser', 'Password1', 'Contacts');
+$conn = new mysqli('localhost', 'apiuser', 'Password1', 'Contacts');
 
 // Make sure connection was successful
 if ($conn->connect_error) {
