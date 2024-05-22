@@ -1,7 +1,7 @@
 <?php
 
 // Make a connection to the database
-$conn = new mysqli('mysql', 'apiuser', 'Password1', 'Contacts');
+$conn = new mysqli('localhost', 'apiuser', 'Password1', 'COP4331');
 
 // Make sure connection was successful
 if ($conn->connect_error) {
@@ -13,12 +13,16 @@ if ($conn->connect_error) {
 $body = json_decode(file_get_contents('php://input'), true);
 
 // Get id of contact to be deleted
-$id = $body['ID'];
+$fn = $body['FirstName'];
+$ln = $body['LastName'];
+$ph = $body['Phone'];
+$em = $body['Email'];
+$id = $body['UserID'];
 
 // Delete the contact
-$sql = "DELETE FROM Contacts WHERE ID=?";
+$sql = "DELETE FROM Contacts WHERE FirstName=? and LastName=? and Phone=? and Email=? and UserID=?";
 $statement = $conn->prepare($sql);
-$statement->bind_param("s", $id);
+$statement->bind_param("sssss", $fn, $ln, $ph, $em, $id);
 $result = $statement->execute();
 
 // Check if deletion failed
