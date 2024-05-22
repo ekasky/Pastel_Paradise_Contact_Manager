@@ -1,13 +1,6 @@
 <?php
 
-// Get environment variables
-$envFile = "../.env";
-$envVar = parse_ini_file($envFile);
-
-$DB_HOST = $envVar['DB_HOST'];
-$DB_USER = $envVar['DB_USER'];
-$DB_PASS = $envVar['DB_PASS'];
-$DB_NAME = $envVar['DB_NAME'];
+include "../config.php";
 
 // Set the response headers to be JSON
 header('Content-type: application/json');
