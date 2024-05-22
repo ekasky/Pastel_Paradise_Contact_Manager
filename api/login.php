@@ -111,10 +111,6 @@ try {
     echo 'Error encoding JWT: ' . $e->getMessage();
 }
 
-// Send login token
-
-echo $jwt;
-
 // Close the db connection
 $statment->close();
 $conn->close();
