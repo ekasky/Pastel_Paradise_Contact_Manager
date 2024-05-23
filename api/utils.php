@@ -4,6 +4,32 @@ require_once '../vendor/autoload.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+function generate_token($user) {
+
+    $payload = [
+        'iss' => 'contactmanagerlamp.com',
+        'iat' => time(),
+        'exp' => time() + 3600,
+        'id'  => $user['id']
+    ];
+
+    $key = getenv('SECRET_KEY');
+
+    try {
+
+        $jwt = JWT::encode($payload, $key, 'HS256');
+
+        return $jwt;
+
+    }
+    catch(Exception $e) {
+
+        return false;
+
+    }
+
+}
+
 function validate_token($jwt) {
 
     try {
