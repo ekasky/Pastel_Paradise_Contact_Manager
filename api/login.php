@@ -1,6 +1,6 @@
 <?php
 
-require_once "utils.php";
+require_once "../utils.php";
 
 // Set the response headers to be JSON
 header('Content-type: application/json');
@@ -62,7 +62,7 @@ if(!$verify) {
 // Generate the users jwt
 $token = generate_token($user);
 
-setcookie("token", $token, time() + 3600, "/", "", true, true);
+setcookie("token", $token, time() + 3600, "/");
 
 echo json_encode([
     'token' => $token

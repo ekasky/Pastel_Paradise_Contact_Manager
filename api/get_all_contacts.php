@@ -1,6 +1,6 @@
 <?php
 
-require_once "utils.php";
+require_once "../utils.php";
 
 // Set the response headers to be JSON
 header('Content-type: application/json');

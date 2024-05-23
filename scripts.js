@@ -37,8 +37,7 @@ document.addEventListener('submit', (event) => {
     })
     .then( data => {
 
-        // Redirect to contact dashboard
-        window.location.href = "/dashboard.php";
+        console.log(data);
 
     })
     .catch(error => {
