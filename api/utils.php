@@ -137,6 +137,24 @@ function is_post_req() {
 
 }
 
+function is_get_req() {
+
+    if($_SERVER['REQUEST_METHOD'] !== 'GET') {
+
+        http_response_code(400);        // Bad Request
+    
+        echo json_encode([
+            'error' => 'GET request only'
+        ]);
+    
+        return false;
+    
+    }
+
+    return true;
+
+}
+
 function get_request_body() {
 
     $respose_body       = file_get_contents('php://input');
