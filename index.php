@@ -37,7 +37,7 @@ if($id !== false) {
 
         <div class="container-right">
 
-            <button class="register-btn">Register</button>
+            <button class="register-btn" href="/register.php" onclick="window.location.href='register.php'">Register</button>
 
             <h1>Pastel Paradise Contact Manager</h1>
             <p>Safely and securly store your contact infomation in the clould.</p>
