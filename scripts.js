@@ -37,7 +37,7 @@ document.addEventListener('submit', (event) => {
     })
     .then( data => {
 
-        console.log(data);
+        window.location.href = '/dashboard.php';
 
     })
     .catch(error => {
