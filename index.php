@@ -8,6 +8,9 @@ $id             = validate_token($token);
 
 if($id !== false) {
 
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
     header('location:dashboard.php');
 
 }
@@ -55,9 +58,9 @@ if($id !== false) {
                     Login In
                 </button>
 
-                <div class="form-error-msg">
+                <p class="form-error-msg" id="form-error-msg">
                     
-                </div>
+                </p>
 
                 <a href="/forgot-password">Forgot Password</a>
 

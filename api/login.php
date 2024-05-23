@@ -34,11 +34,11 @@ $user           = find_user_by_username($body['username'], $conn);
 
 if($user === false) {
 
-    http_response_code(404);            // User not found
-
     echo json_encode([
         'error' => 'User not found'
     ]);
+
+    http_response_code(404);            // User not found
 
     exit();
 

@@ -1,8 +1,10 @@
 // Get the login form by id
 let form = document.getElementById('login-form');
 
+let error_msg = document.getElementById('form-error-msg');
+
 // Add event listener for form submit
-document.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
 
     event.preventDefault();
 
@@ -29,7 +31,10 @@ document.addEventListener('submit', (event) => {
     .then( res => {
 
         if(!res.ok) {
-            throw new Error("Network error");
+            
+            return res.json().then(error => {throw new Error(error.error)});
+            
+
         }
 
         return res.json();
@@ -37,12 +42,24 @@ document.addEventListener('submit', (event) => {
     })
     .then( data => {
 
-        window.location.href = '/dashboard.php';
+        
+        if(data.Missing) {
+
+            error_msg = document.getElementById('form-error-msg');
+            error_msg.innerHTML = 'Required: ' + data.Missing;
+
+
+        }
+        else {
+            error_msg.innerHTML = " ";
+            window.location.href = '/dashboard.php';
+        }
 
     })
     .catch(error => {
 
-        console.log(error);
+        error_msg = document.getElementById('form-error-msg');
+        error_msg.innerHTML = error;
 
     });
 
