@@ -34,6 +34,12 @@ function connect_db() {
     // Check if the connection was sucessfull
     if($conn->connect_error) {
 
+        http_response_code(500);
+
+        echo json_encode([
+            'error' => 'Could not connect to db'
+        ]);
+
         return false;
 
     }
@@ -63,6 +69,55 @@ function check_required_fields($required_fields, $supplied_fields) {
     }
 
     return true;
+
+}
+
+function is_post_req() {
+
+    if($_SERVER['REQUEST_METHOD'] !== 'POST') {
+
+        http_response_code(400);        // Bad Request
+    
+        echo json_encode([
+            'error' => 'POST request only'
+        ]);
+    
+        return false;
+    
+    }
+
+    return true;
+
+}
+
+function get_request_body() {
+
+    $respose_body       = file_get_contents('php://input');
+    $body_json          = json_decode($respose_body, true);
+
+    return $body_json;
+
+}
+
+function find_user_by_username($username, $conn) {
+
+    $query                  = 'SELECT * FROM Users WHERE username=?';
+
+    $statment               = $conn->prepare($query);
+    
+    $statment->bind_param("s", $username);
+    $statment->execute();
+
+    $result                 = $statment->get_result();
+
+    $statment->close();
+
+
+    if($result->num_rows > 0) {
+        return $result->fetch_assoc();                  // Return the user record if found
+    }
+
+    return false;
 
 }
 
