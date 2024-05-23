@@ -62,7 +62,11 @@ if(!$verify) {
 // Generate the users jwt
 $token = generate_token($user);
 
-echo $token;
+setcookie("token", $token, time() + 3600, "/", "", true, true);
+
+echo json_encode([
+    'token' => $token
+]);
 
 // Close the db connection
 $conn->close();
