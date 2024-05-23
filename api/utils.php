@@ -48,6 +48,27 @@ function validate_token($jwt) {
 
 }
 
+function get_jwt() {
+
+    $headers = apache_request_headers();
+
+    if(!isset($headers['Authorization'])) {
+    
+        echo json_encode([
+            'error' => "No user logged in"
+        ]);
+    
+        exit();
+    
+    }
+
+    $jwt = $headers['Authorization'];
+    $jwt = str_replace('Bearer ', '', $jwt);
+
+    return $jwt;
+
+}
+
 function connect_db() {
 
     $db_host            = getenv('DB_HOST');

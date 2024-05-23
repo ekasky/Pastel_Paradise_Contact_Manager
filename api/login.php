@@ -2,9 +2,6 @@
 
 require_once "utils.php";
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 // Set the response headers to be JSON
 header('Content-type: application/json');
 
