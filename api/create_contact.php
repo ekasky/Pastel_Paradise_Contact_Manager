@@ -2,16 +2,11 @@
 
 require_once "utils.php";
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 // Set the response headers to be JSON
 header('Content-type: application/json');
 
 // Ensure the incoming request is a POST request
 if(!is_post_req()) exit();
-
-// Get JWT from request header
 
 // Validate the token
 $token              = get_jwt();
