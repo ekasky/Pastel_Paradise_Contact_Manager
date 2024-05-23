@@ -97,7 +97,8 @@ if(!$verify) {
 $payload = [
     'iss' => 'http://159.203.134.143/',
     'iat' => time(),
-    'exp' => time() + 3600
+    'exp' => time() + 3600,
+    'id' => $user['id']
 ];
 
 try {

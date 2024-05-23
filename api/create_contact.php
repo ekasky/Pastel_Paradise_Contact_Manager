@@ -31,6 +31,7 @@ try {
 
     $key = getenv('SECRET_KEY');
     $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
+    $id = $decoded->id;
 
 }
 catch(Exception $e) {
@@ -93,7 +94,6 @@ if($conn->connect_error) {
 
 // Insert the new contact to the db
 $query = 'INSERT INTO Contacts (first_name, last_name, phone_number, email, user_id) VALUES (?,?,?,?,?)';
-$id = 1;
 
 $statment = $conn->prepare($query);
 $statment->bind_param("ssssi", $first_name, $last_name, $phone_number, $email, $id);
