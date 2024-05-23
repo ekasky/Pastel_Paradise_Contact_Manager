@@ -42,21 +42,13 @@ body {
 
 .verticalCenter {
   margin: 0;
-  position: absolute;
+  position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .horizontalCenter {
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.horizontalCenterButton {
   margin: 0;
   position: relative;
   left: 50%;
@@ -80,15 +72,12 @@ body {
 
 /* login take 2 ... below! */
 /* i will NOT let it take my code away again AHHHHHHHH */
-/* login code is currently incomplete and untested, 
-will be finishing it todayyy */
-
 #loginBackground {
   background-color: rgb(188, 164, 255);
 }
 
 #loginWrapper {
-  background-color: rgb(255, 222, 164);
+  background-color: rgb(255, 200, 164);
   font-family: "Bahnschrift", sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -97,8 +86,8 @@ will be finishing it todayyy */
   text-align: center;
   border-radius: 10%;
   display: flex;
-  width: 500px;
-  height: 300px;
+  width: 70vw;
+  height: 50vw;
   flex-direction: column;
   align-items: center middle;
   justify-content: center;
@@ -152,4 +141,13 @@ will be finishing it todayyy */
   background-color: rgb(125, 100, 255);
   color: white;
   box-shadow: 2px 2px 5px 5px rgb(88, 64, 164);
+}
+
+#loginDiv{
+  font-size: 30px;
+  width: 70%;
+  margin-left: 15%;
+  padding: 25px;
+ /* text-align: center;*/
+  /*align-items: center middle;*/
 }
