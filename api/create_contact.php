@@ -1,6 +1,7 @@
 <?php
 
 require_once '../vendor/autoload.php';
+require_once './util/validate_token.php';
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
@@ -25,20 +26,12 @@ $jwt = $headers['Authorization'];
 $jwt = str_replace('Bearer ', '', $jwt);
 
 
-// Validate the token
+// Validate the token using the validateToken function
+$id = validateToken($jwt);
 
-try {
-
-    $key = getenv('SECRET_KEY');
-    $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
-    $id = $decoded->id;
-
-}
-catch(Exception $e) {
-
+if($id === false) {
     echo "Bad Token";
     exit();
-
 }
 
 // Get the data from the request body
