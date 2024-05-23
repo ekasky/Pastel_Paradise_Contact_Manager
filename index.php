@@ -62,7 +62,7 @@ if($id !== false) {
                     
                 </p>
 
-                <a href="/forgot-password">Forgot Password</a>
+                <a href="forgot_password.php">Forgot Password</a>
 
             </form>
 
