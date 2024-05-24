@@ -52,7 +52,7 @@ document.addEventListener('submit', (event) => {
         else {
 
             error_msg.innerHTML = " ";
-            //window.location.href = '/dashboard.php';
+            window.location.href = '/index.php';
 
         }
 
