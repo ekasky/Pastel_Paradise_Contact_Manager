@@ -69,7 +69,7 @@ if($id !== false) {
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 </html>
