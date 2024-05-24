@@ -1,25 +1,29 @@
-// Get the login form by id
-let form = document.getElementById('login-form');
+// Get the form id
+let form = document.getElementById('register-form');
 
+// Stores the error messages
 let error_msg = document.getElementById('form-error-msg');
 
-// Add event listener for form submit
-form.addEventListener('submit', (event) => {
+document.addEventListener('submit', (event) => {
 
     event.preventDefault();
 
-    // Get the username and password from the form
-    let username = document.getElementById('login-form-username').value;
-    let password = document.getElementById('login-form-password').value;
+    // Get the fields from the form
+    let first_name = document.getElementById('register-form-first_name').value;
+    let last_name = document.getElementById('register-form-last_name').value;
+    let username = document.getElementById('register-form-username').value;
+    let password = document.getElementById('register-form-password').value;
 
     // Prepare the request body
     let body = {
+        first_name,
+        last_name,
         username,
         password
     };
 
-    // Make a AJAX request to login user with supplied credentials
-    fetch('/api/login.php', {
+    // Make a AJAX request to register endpoint
+    fetch("/api/register.php", {
 
         method: "POST",
         headers: {
@@ -28,21 +32,17 @@ form.addEventListener('submit', (event) => {
         body: JSON.stringify(body)
 
     })
-    .then( res => {
+    .then(res => {
 
         if(!res.ok) {
-            
             return res.json().then(error => {throw new Error(error.error)});
-            
-
         }
 
         return res.json();
 
     })
-    .then( data => {
+    .then(data => {
 
-        
         if(data.Missing) {
 
             error_msg = document.getElementById('form-error-msg');
@@ -50,8 +50,10 @@ form.addEventListener('submit', (event) => {
 
         }
         else {
+
             error_msg.innerHTML = " ";
-            window.location.href = '/dashboard.php';
+            //window.location.href = '/dashboard.php';
+
         }
 
     })
