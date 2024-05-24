@@ -1,15 +1,4 @@
 {
-    "name": "ekasky/pastel_paradise_contact_manager",
-    "description": "Contact Manager LAMP App",
-    "type": "library",
-    "license": "None",
-    "authors": [
-        {
-            "name": "Evan Kasky",
-            "email": "ekasky25@gmail.com"
-        }
-    ],
-    "minimum-stability": "alpha",
     "require": {
         "firebase/php-jwt": "^6.10",
         "paragonie/sodium_compat": "^2.0"
