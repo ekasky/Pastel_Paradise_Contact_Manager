@@ -1,6 +1,6 @@
 <?php
 
-function check_password_strength($password) {
+function check_password($password) {
 
     /* Define regex pattern to enforce password strength */
     // Atleast 8 characters long
