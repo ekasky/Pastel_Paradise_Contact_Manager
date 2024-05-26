@@ -1,8 +1,18 @@
 // Get login form by id
-let form = document.getElementById('login-form');
+const form = document.getElementById('login-form');
 
 // Get the error message div
-let error_box = document.getElementById('error-message-box');
+const error_box = document.getElementById('error-message-box');
+
+// Show the successful registration box if coming from register page
+const urlSuccessParam = new URLSearchParams(window.location.search);
+const success_box = document.getElementById('success-message-box');
+
+if(urlSuccessParam.has('success') && urlSuccessParam.get('success') === 'true') {
+
+    success_box.classList.remove('d-none');
+
+}
 
 // Add event listener for the form submit action
 form.addEventListener('submit', (event) => {
@@ -11,8 +21,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // Get the email address and password from the form
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     // Use Regex to verfiy email address is in valid form
     const pattern = /^\S+@\S+\.\S+$/;
@@ -27,7 +37,7 @@ form.addEventListener('submit', (event) => {
 
 
     // Prepare the request body
-    let body = {
+    const body = {
         email, password
     };
 
