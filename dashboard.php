@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 require_once './vendor/autoload.php';
 require_once './middleware/validate_token.php';
+require_once './middleware/get_user_from_token.php';
 
 // Get token from cookies
 if(!isset($_COOKIE['token'])) {
@@ -21,6 +22,11 @@ if(validate_token($token) === false) {
     exit();
 }
 
+// Get info from token
+$user = json_decode(get_user_from_token($token));
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +37,9 @@ if(validate_token($token) === false) {
     <title>Document</title>
 </head>
 <body>
-    Dashboard
+
+    <p><?php echo $user->email ?></p>
+    <p><?php echo $user->id ?></p>
+
 </body>
 </html>
