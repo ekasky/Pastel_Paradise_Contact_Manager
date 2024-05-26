@@ -116,8 +116,9 @@ if(!$result) {
 
 }
 
-/* User creared successfully, redirect to login page */
-header('Location:../index.html');
-echo "Success";
+/* User creared successfully */
+echo json_encode([
+    'message' => "User created"
+]);
 
 ?>
