@@ -11,6 +11,8 @@ const success_box = document.getElementById('success-message-box');
 if(urlSuccessParam.has('success') && urlSuccessParam.get('success') === 'true') {
 
     success_box.classList.remove('d-none');
+    const newUrl = window.location.href.replace('?success=true', '');
+    history.replaceState(null, '', newUrl);
 
 }
 
@@ -31,6 +33,7 @@ form.addEventListener('submit', (event) => {
 
         error_box.textContent = 'Invalid email address format';
         error_box.classList.remove('d-none');
+        success_box.classList.add('d-none');
         return;
 
     }
@@ -62,6 +65,7 @@ form.addEventListener('submit', (event) => {
             
             error_box.textContent = data.error;
             error_box.classList.remove('d-none');
+            success_box.classList.add('d-none');
 
             return;
         }
