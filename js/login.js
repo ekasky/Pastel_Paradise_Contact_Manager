@@ -1,6 +1,9 @@
 // Get login form by id
 let form = document.getElementById('login-form');
 
+// Get the error message div
+let error_box = document.getElementById('error-message-box');
+
 // Add event listener for the form submit action
 form.addEventListener('submit', (event) => {
 
@@ -16,7 +19,8 @@ form.addEventListener('submit', (event) => {
 
     if(!pattern.test(email)) {
 
-        console.log("Invalid email");
+        error_box.textContent = 'Invalid email address format';
+        error_box.classList.remove('d-none');
         return;
 
     }
@@ -45,7 +49,10 @@ form.addEventListener('submit', (event) => {
     .then(data => {
 
         if(data.error) {
-            console.log(`ERROR -> ${data.error}`);
+            
+            error_box.textContent = data.error;
+            error_box.classList.remove('d-none');
+
             return;
         }
          
