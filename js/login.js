@@ -26,19 +26,6 @@ form.addEventListener('submit', (event) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // Use Regex to verfiy email address is in valid form
-    const pattern = /^\S+@\S+\.\S+$/;
-
-    if(!pattern.test(email)) {
-
-        error_box.textContent = 'Invalid email address format';
-        error_box.classList.remove('d-none');
-        success_box.classList.add('d-none');
-        return;
-
-    }
-
-
     // Prepare the request body
     const body = {
         email, password
@@ -68,6 +55,18 @@ form.addEventListener('submit', (event) => {
             success_box.classList.add('d-none');
 
             return;
+        }
+
+        // Use Regex to verfiy email address is in valid form
+        const pattern = /^\S+@\S+\.\S+$/;
+
+        if(!pattern.test(email)) {
+
+            error_box.textContent = 'Invalid email address format';
+            error_box.classList.remove('d-none');
+            success_box.classList.add('d-none');
+            return;
+
         }
          
         // Make redirect request to ensure user is valid
