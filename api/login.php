@@ -85,9 +85,10 @@ if($jwt === null) {
 
 /* Return jwt as http token and direct to dashboard */
 
-header('Authorization: Bearer ' . $jwt);
+setcookie("token", $jwt, time() + 3600, "/");
 echo json_encode([
-    'message' => 'Successful Login'
+    'message' => 'Login successful'
 ]);
+
 
 ?>

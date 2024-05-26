@@ -6,35 +6,19 @@ error_reporting(E_ALL);
 require_once './vendor/autoload.php';
 require_once './middleware/validate_token.php';
 
-/* Get headers */
-$headers = apache_request_headers();
-
-/* Check if the Authorization header is set */
-
-if( isset($headers['Authorization']) ) {
-
+// Get token from cookies
+if(!isset($_COOKIE['token'])) {
     header('Location:index.html');
     exit();
-
 }
 
-/* Get token from header (This section got help from online src) */
-if (preg_match('/Bearer\s(\S+)/', $authorizationHeader, $matches)) {
-    $token = $matches[1];
-} 
-else {
+$token = $_COOKIE['token'];
+
+// Verify the token
+if(validate_token($token) === false) {
 
     header('Location:index.html');
     exit();
-
-}
-
-/* Validate token */
-if(validare_token($token) === false) {
-
-    header('Location:index.html');
-    exit();
-
 }
 
 ?>

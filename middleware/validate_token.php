@@ -12,7 +12,7 @@ function validate_token($jwt) {
     // Try and decode the provied token
     try {
 
-        $decoded        = JWT::decode($jwt, $key, ['HS256']);
+        $decoded        = JWT::decode($jwt, new Key($key, 'HS256'));
 
         return true;
 
