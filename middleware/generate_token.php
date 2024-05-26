@@ -12,8 +12,8 @@ function generate_token($user, $exp_ms) {
         'iss'       => 'pastelparadise.xyz',
         'iat'       => time(),
         'exp'       => time() + $exp_ms,
-        'id'        => $user['id'],
-        'username'  => $user['username']
+        'id'        => $user['ID'],
+        'email'  => $user['email']
 
     ];
 
