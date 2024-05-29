@@ -13,22 +13,23 @@ if ($conn->connect_error) {
 $body = json_decode(file_get_contents('php://input'), true);
 
 // Data for updating contact
-$oldFN = $body['FirstName'];
+$ID = $body['userId'];
+
+$olfFN = $body['FirstName'];
 $oldLN = $body['LastName'];
 $oldPH = $body['Phone'];
 $oldEM = $body['Email'];
-$oldID = $body['UserID'];
 
 $newFN = $body['newFirstName'];
 $newLN = $body['newLastName'];
 $newPH = $body['newPhone'];
 $newEM = $body['newEmail'];
-$newID = $body['newUserID'];
+
 
 // Edit the contact
-$sql = "Update Contacts SET FirstName=?, LastName=?, Phone=?, Email=?, UserID=? WHERE FirstName=? and LastName=? and Phone=? and Email=? and UserID=?";
+$sql = "Update Contacts SET FirstName=?, LastName=?, Phone=?, Email=? WHERE FirstName=? and LastName=? and Phone=? and Email=? and UserID=?";
 $statement = $conn->prepare($sql);
-$statement->bind_param("ssssssssss", $newFN, $newLN, $newPH, $newEM, $newID ,$oldFN, $oldLN, $oldPH, $oldEM, $oldID);
+$statement->bind_param("sssssssss", $newFN, $newLN, $newPH, $newEM, $ID ,$oldFN, $oldLN, $oldPH, $oldEM);
 $result = $statement->execute();
 
 // Check if edit failed
