@@ -29,7 +29,7 @@ $newEM = $body['newEmail'];
 // Edit the contact
 $sql = "Update Contacts SET FirstName=?, LastName=?, Phone=?, Email=? WHERE FirstName=? and LastName=? and Phone=? and Email=? and UserID=?";
 $statement = $conn->prepare($sql);
-$statement->bind_param("sssssssss", $newFN, $newLN, $newPH, $newEM, $ID ,$oldFN, $oldLN, $oldPH, $oldEM);
+$statement->bind_param("sssssssss", $newFN, $newLN, $newPH, $newEM, $oldFN, $oldLN, $oldPH, $oldEM, $ID);
 $result = $statement->execute();
 
 // Check if edit failed
