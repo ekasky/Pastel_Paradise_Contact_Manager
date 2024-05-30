@@ -1,0 +1,82 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e8b8ec;
+  background-image: url("bg-redo.png");
+  background-size: 20%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+#fcon {
+  background-color: rgb(252, 255, 163);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7c156d;
+  border: 5px solid #7c156d;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+/*form{
+  text-align: center;
+}*/
+
+.signupField {
+  border: 2px solid #7c156d;
+  border-radius: 20px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px 7px 5px 7px;
+}
+
+#signupButton {
+  background-color: rgb(255, 209, 227);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #7c156d;
+  ;
+  text-align: center;
+  border: 2px solid #7c156d;
+  ;
+  border-radius: 20px;
+  margin-top: 1vw;
+  padding: 0.5em;
+}
+
+#signupButton:hover {
+  background-color: rgb(255, 158, 195);
+}
+
+#signupButton:active {
+  background-color: rgb(255, 26, 113);
+  color: white;
+  box-shadow: 2px 2px 5px 5px #7c156d;
+}
+
+label {
+  border: solid;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #fcon {
+    width: 64vw;
+  }
+
+  .signupField {
+    width: 50vw;
+  }
+}

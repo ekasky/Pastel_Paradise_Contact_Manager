@@ -1,0 +1,194 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e8b8ec;
+  background-image: url("bg-redo.png");
+  background-size: 20%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+.button {
+  background-color: #fcffa3;
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7c156d;
+  border: 5px solid #7c156d;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  align-items: center middle;
+  justify-content: center;
+  margin-top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+.button:hover {
+  background-color: #fcdca3;
+}
+
+.button:active {
+  background-color: rgb(255, 180, 125);
+  box-shadow: 2px 2px 5px 5px #7c156d;
+  color: white;
+}
+
+.verticalCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontalCenter {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.horizontalCenterButton {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#imgLegKick {
+  width: 50vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#paradiseLogo {
+  height: 20vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* login take 2 ... below! */
+/* i will NOT let it take my code away again AHHHHHHHH */
+/* login code is currently incomplete and untested, 
+will be finishing it todayyy */
+
+#loginBackground {
+  background-color: rgb(188, 164, 255);
+}
+
+#loginWrapper {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginContainer {
+  background-color: rgb(255, 239, 188);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(88, 64, 164);
+  border: 5px solid rgb(88, 64, 164);
+  border-radius: 20px;
+  display: flex;
+  width: 500px;
+  height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+#loginInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginRow {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginField {
+  text-align: left;
+  margin: 5px;
+  height: 30px;
+  border: 2px solid rgb(88, 64, 164);
+  padding: 5px 7px 5px 7px;
+  border-radius: 20px;
+}
+
+#loginButton {
+  background-color: rgb(222, 166, 255);
+  font-family: "Bahnschrift", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #352763;
+  text-align: center;
+  border: 2px solid rgb(88, 64, 164);
+  border-radius: 20px;
+  margin-top: 1vw;
+  padding: 0.5em;
+}
+
+#loginButton:hover {
+  background-color: rgb(170, 125, 255);
+  color: black;
+}
+
+#loginButton:active {
+  background-color: rgb(125, 100, 255);
+  color: white;
+  box-shadow: 2px 2px 5px 5px rgb(88, 64, 164);
+}
+
+#options {
+  display: flex;
+  /* work in progress */
+}
+
+/* my super genius way of making the username: and
+password: things disappear when the screen's too small
+for them. i'm a professional! i'm a cracked out genius! */
+.loginLabel {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(88, 64, 164);
+}
+
+/* responsiveness for mobile devices ??? or so i hope */
+
+@media screen and (max-width: 800px) {
+  #loginContainer {
+    width: 64vw;
+  }
+
+  .loginField {
+    width: 50vw;
+  }
+}
+
+/* will edit later bc centering issues are making 
+this not fit when it really should */
+@media screen and (max-width: 600px) {
+  .loginLabel {
+    font-size: 0px;
+  }
+}
