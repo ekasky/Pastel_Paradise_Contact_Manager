@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<!--starting the login page 12:01am Tabby-->
-<!-- ur awesome thank u (sara) -->
-<html>
-  <title>Login/Signup | Pastel Paradise </title>
+<html lang="en">
+  <title>Login | Pastel Paradise </title>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/login.css" rel="stylesheet">
+    <script type="text/javascript" src="js/script.js"></script>
   </head>
 
   <body id="loginBackground">
-    <img id="paradiseLogo" src="paradise-logo.png" alt="Pastel Paradise Contact Manager Logo"></img> 
+    <img id="paradiseLogo" src="images/paradise-logo.png" alt="Pastel Paradise Contact Manager Logo"></img> 
     <div class="verticalCenter">
       <div id="loginWrapper">
-        <div id="loginContainer">
+        <div class="form-container" id="loginContainer">
           <p>LOG IN</p>
-          <form action="Login.php" method="post">
+      <!--    <form action="LAMPAPI/Login.php" method="post">  -->
+            <form method="post" action="LAMPAPI/Login.php">
             <div class="loginRow">
-              <p>username: </p>
-              <input type="text" name="username" 
-                size="37" class="form-control 
-                loginField" value="">
+              <p class="loginLabel">username: </p>
+              <input type="text" name="username" size="37" class="form-control loginField" id="loginName" placeholder="username" required/>
             </div>
 
             <div class="loginRow">
-              <p>password: </p>
-              <input type="text" name="username" 
-                size="37" class="form-control 
-                loginField" value="">
+              <p class="loginLabel">password: </p>
+              <input type="text" name="username" size="37" class="form-control loginField" id="loginPassword" placeholder="password" required/>
             </div>
 
-            <input type="submit" id="loginButton" value="log in!">
+            <div class="loginRow">
+              <!-- just changed this from input type="submit" to button type="button"-->
+              <input type="submit" id="loginButton" value="log in!" onclick="doLogin();">
+              <span id="loginResult"></span> 
+            </div>
           </form>
         </div>
       </div>
     </div>
   </body>
+
 </html>
