@@ -33,7 +33,7 @@ function doLogin() {
         userId = jsonObject.id;
 
         if (userId < 1) {
-          document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
+          document.getElementById("loginResult").innerHTML = "<br><img src='images/errorprompt.png' id='errorIcon'>  User/Password combination incorrect";
           return;
         }
 
@@ -48,28 +48,28 @@ function doLogin() {
     xhr.send(jsonPayload);
   }
   catch (err) {
-    document.getElementById("loginResult").innerHTML = err.message;
-    return;
+    document.getElementById("loginResult").innerHTML = "</br>" + err.message;
   }
 
 }
 
 function doSignup() {
   document.getElementById("signupResult").innerHTML = "";
+
   let firstName = document.getElementById("first").value;
   let lastName = document.getElementById("last").value;
   let username = document.getElementById("user").value;
   let password = document.getElementById("pass").value;
   let error = 0;
 
-  if (firstName == "") {
+  if (firstName.length < 1) {
     error += 1;
     document.getElementById("signupResult").innerHTML += "<br>"
     document.getElementById("signupResult").innerHTML += "<img src='images/errorprompt.png' id='errorIcon'>";
     document.getElementById("signupResult").innerHTML += "  Please input a first name.";
   }
 
-  if (lastName.length == "") {
+  if (lastName.length < 1) {
     document.getElementById("signupResult").innerHTML += "<br>";
     document.getElementById("signupResult").innerHTML += "<img src='images/errorprompt.png' id='errorIcon'>";
     document.getElementById("signupResult").innerHTML += "  Please input a last name.";
@@ -94,14 +94,18 @@ function doSignup() {
     return;
   }
 
-  let newUser = {
+  //let xhr = new XMLHttpRequest();
+  //xhr.open("POST", url, true);
+  //xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+  //just added this! still needs work- i will continue in the am! -Tabby
+  let tmp = {
     firstName: firstName,
     lastName: lastName,
     login: username,
     password: password
   };
 
-  let jsonPayload = JSON.stringify(newUser);
+  let jsonPayload = JSON.stringify(tmp);
 
   let url = urlBase + '/register.' + extension;
 
@@ -111,25 +115,32 @@ function doSignup() {
 
   try {
     xhr.onreadystatechange = function() {
-      if (this.readystate != 4) return;
-      if (this.status == 409) {
-        document.getElementById("signupResult").innerHTML = "<br>User already exists";
-        return;
-      }
-      if (this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {
         let jsonObject = JSON.parse(xhr.responseText);
         userId = jsonObject.id;
-        document.getElementById("signupResult").innerHTML = "<br>User added successfully";
+        //
+
+
         firstName = jsonObject.firstName;
         lastName = jsonObject.lastName;
+        //firstName = jsonObject.first_name;
+        //lastName = jsonObject.last_name;
+
         saveCookie();
+
+        window.location.href = "contacts.html";
       }
     };
     xhr.send(jsonPayload);
-  } catch (err) {
-    document.getElementById("signupResult").innerHTML = "<br>";
-    document.getElementById("signupResult").innerHTML += err.message;
   }
+  catch (err) {
+    document.getElementById("signupResult").innerHTML = "<br>" + err.message;
+    // the break is what makes the message go under the button until next to it
+    // sorry for disappearing the whole day i panicked
+    // - sara
+    return;
+  }
+  document.getElementById("signupResult").innerHTML = "User added successfully!";
 }
 
 function saveCookie() {
@@ -174,13 +185,24 @@ function doLogout() {
 }
 
 function addContact() {
-  let newContact = document.getElementById("colorText").value;
-  document.getElementById("colorAddResult").innerHTML = "";
+  let newFirstName = document.getElementById("fname").value;
+  let newLastName = document.getElementById("lname").value;
+  let newEmail = document.getElementById("email").value;
+  let newPhoneNo = document.getElementById("phone").value;
 
-  let tmp = { color: newColor, userId, userId };
+  document.getElementById("contactAddResult").innerHTML = "";
+
+  let tmp = {
+    firstName: newFirstName,
+    lastName: newLastName,
+    email: newEmail,
+    phone: newPhoneNo,
+    userId: userId
+  };
+
   let jsonPayload = JSON.stringify(tmp);
 
-  let url = urlBase + '/AddColor.' + extension;
+  let url = urlBase + '/Create_Contact.' + extension;
 
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
@@ -188,18 +210,68 @@ function addContact() {
   try {
     xhr.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("colorAddResult").innerHTML = "Color has been added";
+        document.getElementById("contactAddResult").innerHTML = "Contact added successfully";
+        document.getElementById("contactForm").reset();
+        loadContacts(); // TODO: create loadcontacts 
+        showTable(); // TODO: create showtable
       }
     };
     xhr.send(jsonPayload);
   }
   catch (err) {
-    document.getElementById("colorAddResult").innerHTML = err.message;
+    document.getElementById("contactAddResult").innerHTML = err.message;
+    return;
   }
 
 }
 
-function searchColor() {
+function loadContacts() {
+  let tmp = {
+    search: "",
+    userId: userId
+  };
+
+  let jsonPayload = JSON.stringify(tmp);
+
+  let url = urlBase + '/SearchContacts.' + extension;
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+  try {
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        let jsonObject = JSON.parse(xhr.responseText);
+        if (jsonObject.error) {
+          console.log(jsonObject.error);
+          return;
+        }
+
+        let table = document.getElementById("contactsTable").innerHTML;
+
+        for (let i = 0; i < jsonObject.results.length; i++) {
+          table += "<tr id='row" + i + "'>"
+          table += "<td id='fname" + i + "'>" + jsonObject.results[i].firstName + "</td>"
+          table += "<td id='lname" + i + "'>" + jsonObject.results[i].lastName + "</td>"
+          table += "<td id='email" + i + "'>" + jsonObject.results[i].email + "</td>"
+          table += "<td id='phone" + i + "'>" + jsonObject.results[i].phone + "</td>"
+          table += "<td id='actions" + i + "'>todo</td>"
+          table += "</tr>";
+        }
+        table += "<tr>"
+        table += "<td><p>" + jsonObject.results.length + "</p></td>";
+        table += "</tr>"
+      }
+    };
+    xhr.send(jsonPayload);
+
+  } catch (err) {
+    console.log(jsonObject.error);
+    return;
+  }
+}
+
+function searchContacts() {
   let srch = document.getElementById("searchText").value;
   document.getElementById("colorSearchResult").innerHTML = "";
 
@@ -208,7 +280,7 @@ function searchColor() {
   let tmp = { search: srch, userId: userId };
   let jsonPayload = JSON.stringify(tmp);
 
-  let url = urlBase + '/SearchColors.' + extension;
+  let url = urlBase + '/SearchContacts.' + extension;
 
   let xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
