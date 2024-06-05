@@ -38,8 +38,7 @@ const renderCards = (contacts) => {
         btn.addEventListener('click', () => {
 
             const id = btn.parentNode.parentNode.id;
-            delete_contact(id);
-
+            if(confirm("Are you sure you want to delete?")) delete_contact(id);
         });
 
     });
