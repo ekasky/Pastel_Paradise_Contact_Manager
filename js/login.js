@@ -62,7 +62,7 @@ form.addEventListener('submit', async (event) => {
     const password = document.getElementById('password').value.trim();
 
     // Client side form validation
-    if(validateInput(email) === true) {
+    if(validateInput(email, password) === true) {
 
         return;
 
