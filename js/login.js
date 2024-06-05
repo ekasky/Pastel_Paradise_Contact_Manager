@@ -27,6 +27,22 @@ const validateInput = (email, password) => {
         email_client_error.classList.add('hidden');
     }
 
+
+    if(password === '') {
+
+        password_client_error.innerHTML = 'Password required';
+
+        password_client_error.classList.remove('hidden');
+
+        clientError = true;
+
+    }
+    else {
+
+        password_client_error.classList.add('hidden');
+
+    }
+
     return clientError;
 
 };
@@ -42,11 +58,11 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     // Grab the form fields needed for login
-    const email    = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email    = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
 
     // Client side form validation
-    if(validateInput(email, password) === true) {
+    if(validateInput(email) === true) {
 
         return;
 
