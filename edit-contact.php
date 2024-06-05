@@ -94,27 +94,27 @@ catch(Exception $e) {
                     <div>
                         <label for="first-name" class="block text-gray-800 font-semibold mb-2">First Name<span class="text-red-500">*</span></label>
                         <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter first name">
+                        <div id="first-name-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">First name required *</div>
                     </div>
 
                     <div>
                         <label for="last-name" class="block text-gray-800 font-semibold mb-2">Last Name<span class="text-red-500">*</span></label>
                         <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter last name">
+                        <div id="last-name-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">Last name required *</div>
                     </div>
 
                 </div>
 
                 <div class="mb-4">
-
                     <label for="phone-number" class="block text-gray-800 font-semibold mb-2">Phone Number<span class="text-red-500">*</span></label>
                     <input type="text" id="phone-number" name="phone-number" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter phone number">
-                
+                    <div id="phone-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">Phone number required *</div>
                 </div>
 
                 <div class="mb-4">
-
                     <label for="email" class="block text-gray-800 font-semibold mb-2">Email<span class="text-red-500">*</span></label>
                     <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter email">
-                
+                    <div id="email-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">Email address required *</div>
                 </div>
 
                 <div class="text-center">
