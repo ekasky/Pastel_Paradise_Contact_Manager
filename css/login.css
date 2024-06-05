@@ -1,0 +1,142 @@
+/* Moved to inline tailwindcss */
+/* 
+#loginBackground {
+  background-color: #e8b8ec;
+}
+*/
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginWrapper {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loginContainer {
+  background-color: rgb(252, 255, 163);
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 24px;
+  color: #7c156d;
+  border: 5px solid #7c156d;
+  border-radius: 20px;
+  display: flex;
+  width: 500px;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 1vw 1vh 1vw;
+}
+
+#loginInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginRow {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.loginField {
+  text-align: left;
+  margin: 5px;
+  height: 30px;
+  border: 2px solid #7c156d;
+  padding: 5px 7px 5px 7px;
+  border-radius: 20px;
+}
+
+/*
+#loginButton {
+  background-color: rgb(255, 209, 227);
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #7c156d;
+  text-align: center;
+  border: 2px solid #7c156d;
+  border-radius: 20px;
+  margin-top: 1vw;
+  padding: 0.5em;
+}
+
+
+#loginButton:hover {
+  background-color: rgb(255, 158, 195);
+}
+
+#loginButton:active {
+  background-color: rgb(255, 26, 113);
+  color: white;
+  box-shadow: 2px 2px 5px 5px #7c156d;
+}
+*/
+
+#signupAlt {
+  font-size: 18px;
+}
+
+#options {
+  display: flex;
+  /* work in progress */
+}
+
+#loginResult {
+  font-size: 15px;
+}
+
+/* I dint see what this is doing? It looks the same when I remove? */
+
+/* my super genius way of making the username: and
+password: things disappear when the screen's too small
+for them. i'm a professional! i'm a cracked out genius! */
+/*
+.loginLabel {
+  font-size: 22px;
+  font-weight: 300;
+  color: #7c156d;
+}
+*/
+
+
+/* This is alreasy achieved in the tailwindcss */
+/* responsiveness for mobile devices ??? or so i hope 
+
+@media screen and (max-width: 800px) {
+  #loginContainer {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  .loginField {
+    width: 50vw;
+  }
+
+  .loginLabel {
+    font-size: 0px;
+  }
+}
+
+@media screen and (max-aspect-ratio: 9/16) {
+  #paradiseLogo {
+    width: 72vw;
+    height: auto;
+    position: fixed;
+  }
+}
+*/
+

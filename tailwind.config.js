@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+
+      fontFamily: {
+        'Mochiy': ['Mochiy Pop One', 'sans-serif']
+      }
+
+    },
   },
   plugins: [],
 }

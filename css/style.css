@@ -1,0 +1,199 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-weight: 200;
+  background: #e8b8ec;
+  background-image: url("../assets/bg-redo.png");
+  background-size: 20%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+#buttonContainer {
+  float: right;
+  width: 50vw;
+  margin-top: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: #fcffa3;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #7c156d;
+  border: 5px solid #7c156d;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+  width: 30vw;
+  flex-direction: column;
+  align-items: center middle;
+  justify-content: center;
+  margin-top: 1vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+.button:hover {
+  background-color: #fcdca3;
+}
+
+.button:active {
+  background-color: rgb(255, 180, 125);
+  box-shadow: 2px 2px 5px 5px #7c156d;
+  color: white;
+}
+
+.verticalCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.horizontalCenter {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.horizontalCenterButton {
+  margin: 0;
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#imgLegKick {
+  z-index: -1;
+  width: 50vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#paradiseLogo {
+  z-index: 1;
+  height: 33vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#errorIcon {
+  width: 14px;
+  height: auto;
+}
+
+#addResult {
+  font-size: 15px;
+}
+
+#addButton {
+  background-color: rgb(255, 209, 227);
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #7c156d;
+  text-align: center;
+  border: 2px solid #7c156d;
+  border-radius: 20px;
+  margin-top: 1vw;
+  padding: 0.5em;
+}
+
+#addButton:hover {
+  background-color: rgb(255, 158, 195);
+}
+
+#addButton:active {
+  background-color: rgb(255, 26, 113);
+  color: white;
+  box-shadow: 2px 2px 5px 5px #7c156d;
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  #paradiseLogo {
+    width: 50vw;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #buttonContainer {
+    height: 50vh;
+  }
+
+  #paradiseLogo {
+    width: 50vw;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #imgLegKick {
+    width: 90vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  #addResult {
+    font-size: 13px;
+  }
+}
+
+/* login take 2 ... below! */
+/* i will NOT let it take my code away again AHHHHHHHH */
+/* login code is currently incomplete and untested, 
+will be finishing it todayyy */
+
+
+#navBar {
+  background-color: rgb(255, 239, 188);
+  list-style-type: none;
+  position: fixed;
+  width: 20vw;
+  height: 100vw;
+  margin: -5vw;
+  padding: 5vw 5vw 0vw 5vw;
+  border: 4px solid #7c156d;
+}
+
+/* i always forget this but padding order is 
+T R B L. fun mnemonic ... heeere comes trouble ...*/
+
+.navItem {
+  color: #7c156d;
+  margin-left: 5vw;
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 24px;
+  align-self: center;
+  padding: 10px 0px 10px 0px
+}
+
+hr {
+  border: 2px solid #7c156d;
+}
+
+/* very stupid fix */
+#paradiseLogoContacts {
+  height: 15vw;
+}
