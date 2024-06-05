@@ -30,7 +30,7 @@ const validateInput = (email, password) => {
 
     if(password === '') {
 
-        password_client_error.innerHTML = 'Password required';
+        password_client_error.innerHTML = 'Password required *';
 
         password_client_error.classList.remove('hidden');
 
