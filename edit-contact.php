@@ -37,7 +37,7 @@ catch(Exception $e) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactKeepr >> Edit Contact</title>
+    <title>Pastel Paradise >> Edit Contact</title>
     <link rel="stylesheet" href="output.css">
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo2_orginal_cropped-transparent-bg_icon.ico">
 </head>
@@ -48,8 +48,7 @@ catch(Exception $e) {
     <header class="flex items-center justify-between lg:px-8 relative h-12 lg:h-16">
 
     <a href="/contacts.php" id="navbar-logo" class="flex flex-row items-center gap-2 text-lg lg:text-xl font-bold text-black ml-2">
-        <img src="./assets/logos/logo2_cropped_transparent_bg.webp" alt="ContactKeepr Logo" class="w-8 lg:w-10">
-        <h1 class="hover:text-gray-600">ContactKeepr</h1>
+        <img src="./assets/logos/paradise-logo.png" alt="ContactKeepr Logo" class="w-16 lg:w-24">
     </a>
 
     <nav id="destop-nav" class="hidden lg:flex lg:flex-row lg:items-center lg:gap-8" aria-label="desktop-nav">
@@ -57,8 +56,8 @@ catch(Exception $e) {
         <a href="/contacts.php" class="text-sm text-gray-800 hover:text-gray-600">Contacts</a>
         <a href="/settings.html" class="text-sm text-gray-800 hover:text-gray-600">Settings</a>
         <div>
-            <a href="/new-contact.php" class="bg-blue-600 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-blue-700 focus:bg-blue-700">New Contact</a>
-            <button id="logout-btn" class="bg-red-600 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-red-700 focus:bg-red-700">Logout</button>
+            <a href="/new-contact.php" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">New Contact</a>
+            <button id="logout-btn" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Logout</button>
         </div>
 
     </nav>
@@ -77,9 +76,11 @@ catch(Exception $e) {
 
     </header>
 
-    <section class="flex items-center justify-center h-screen bg-gradient-to-b from-cyan-500 to-cyan-700 bg-cover bg-center bg-fixed">
-        
-        <div class="max-w-lg mx-auto px-8 py-8 bg-white rounded-lg shadow-md">
+    <section class="flex items-center justify-center h-screen bg-gradient-to-br from-pink-400 to-purple-400 relative">
+    
+        <div class="absolute inset-0 bg-cover bg-center bg-repeat" style="background-image: url('./assets/bg-redo.png'); background-size: 15%;"></div>
+
+        <div class="max-w-lg mx-auto px-8 py-8 bg-white rounded-lg shadow-md z-0">
             
             <h2 class="text-3xl font-semibold mb-4 text-center">Edit Contact</h2>
 
@@ -118,7 +119,7 @@ catch(Exception $e) {
 
                 <div class="text-center">
 
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out">Update Contact</button>
+                    <button type="submit" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Update Contact</button>
                 
                 </div>
 
@@ -129,16 +130,16 @@ catch(Exception $e) {
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gradient-to-br from-pink-400 to-purple-400 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
             <div class="text-center md:text-left mb-4 md:mb-0">
-                <p>&copy; 2024 ContactKeepr. All rights reserved.</p>
+                <p>&copy; 2024 Pastel Paradise. All rights reserved.</p>
             </div>
             <div class="text-center md:text-right">
                 <ul class="flex flex-wrap justify-center md:justify-end space-x-4">
-                    <li><a href="#" class="hover:text-blue-500">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-black">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-black">Contact Us</a></li>
                 </ul>
             </div>
         </div>

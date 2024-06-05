@@ -1,0 +1,16 @@
+{
+  "name": "pastel_paradise_contact_manager",
+  "version": "1.0.0",
+  "description": "The program is a personal contact manager. Each user needs a login. If someone does not have an account, you need to offer a registration/signup mechanism. For each user, they can add their own contacts (not shared contacts). They can search for, edit, and delete contacts. When the initial page appears, users can either log in or sign up (register).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i input.css -o output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

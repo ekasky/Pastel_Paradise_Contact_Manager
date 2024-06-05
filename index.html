@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactKeepr >> Home</title>
+    <title>Pastel Paradise >> Home</title>
     <link rel="stylesheet" href="output.css">
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo2_orginal_cropped-transparent-bg_icon.ico">
 </head>
@@ -15,8 +15,7 @@
     <header class="flex items-center justify-between lg:px-8 relative h-12 lg:h-16">
 
         <a href="/" id="navbar-logo" class="flex flex-row items-center gap-2 text-lg lg:text-xl font-bold text-black ml-2">
-            <img src="./assets/logos/logo2_cropped_transparent_bg.webp" alt="ContactKeepr Logo" class="w-8 lg:w-10">
-            <h1 class="hover:text-gray-600">ContactKeepr</h1>
+            <img src="./assets/logos/paradise-logo.png" alt="ContactKeepr Logo" class="w-16 lg:w-24">
         </a>
 
         <nav id="destop-nav" class="hidden lg:flex lg:flex-row lg:items-center lg:gap-8" aria-label="desktop-nav">
@@ -26,13 +25,13 @@
             <a href="#" class="text-sm text-gray-800 hover:text-gray-600">Help</a>
             <a href="#" class="text-sm text-gray-800 hover:text-gray-600">Developers</a>
             <a href="/login.html" class="text-sm text-gray-800 hover:text-gray-600">Login</a>
-            <a href="/signup.html" class="bg-blue-500 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-blue-600 focus:bg-blue-600">Sign Up</a>
+            <a href="/signup.html" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Sign Up</a>
 
         </nav>
 
         <button class="h-full w-12 flex items-center justify-center hover:bg-slate-100 lg:hidden" id="mobile-menu-btn"><img src="./assets/icons/bars-solid.svg" alt="Menu Open" id="mobile-menu-icon" class="w-4"></button>
 
-        <nav id="moblie-nav" class="absolute top-full left-0 bg-white w-full hidden flex-col gap-4 p-4 shadow-lg lg:hidden" aria-label="moblie-nav">
+        <nav id="moblie-nav" class="absolute top-full left-0 bg-white w-full hidden flex-col gap-4 p-4 shadow-lg lg:hidden z-30" aria-label="moblie-nav">
             
             <a href="/" class="text-sm text-gray-800 hover:text-gray-600">Home</a>
             <a href="#" class="text-sm text-gray-800 hover:text-gray-600">Getting Started</a>
@@ -50,68 +49,71 @@
 
         <!-- Hero Section -->
 
-        <section class="bg-gradient-to-b from-cyan-500 to-cyan-700 bg-cover bg-center bg-fixed h-screen flex items-center justify-center text-white">
+        <section class="relative bg-gradient-to-br from-pink-400 to-purple-400 h-screen flex items-center justify-center">
 
-            <div class="max-w-4xl mx-auto text-center px-4">
+            <div class="absolute inset-0 bg-cover bg-center bg-repeat" style="background-image: url('./assets/bg-redo.png'); background-size: 15%;"></div>
+
+            <div class="max-w-4xl mx-auto text-center px-12 py-8 z-0 rounded-xl shadow-lg bg-slate-100">
                 
-                <h1 class="text-4xl lg:text-6xl font-bold mb-4">Welcome to ContactKeepr</h1>
-                <p class="text-lg lg:text-xl mb-8">Your ultimate solution for managing contacts efficiently.</p>
+                <h1 class="text-2xl lg:text-5xl font-bold mb-4">Welcome to Pastel Paradise</h1>
+                <p class="text-md lg:text-xl mb-8">Your ultimate solution for managing contacts efficiently.</p>
                 
                 <div class="flex flex-row items-center justify-center gap-4">
-                    <a href="/login.html" class="bg-white text-blue-500 font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-100 transition duration-300 ease-in-out">Log In</a>
-                    <a href="/signup.html" class="bg-blue-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out">Sign Up</a>
+                    <a href="/login.html" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300 transition duration-300 ease-in-out">Log In</a>
+                    <a href="/signup.html" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300 transition duration-300 ease-in-out">Sign Up</a>
                 </div>
 
             </div>
 
         </section>
 
-<!-- Information Section -->
+        <!-- Information Section -->
 
-<section class="py-20 bg-slate-100">
+        <section class="py-20 bg-white">
 
-    <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">Simple and Easy to Use</h2>
+            <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">Simple and Easy to Use</h2>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <!-- Card -->
-            <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-                <h2 class="text-xl font-semibold mb-4">Step 1: Sign Up</h2>
-                <p class="text-gray-700">Sign up for an account and unlock a world of possibilities. With just a few simple steps, you can join our community and gain access to powerful tools for managing your contacts. Best of all, it's completely free! Take control of your contacts today.</p>
+                    <!-- Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+                        <h2 class="text-xl font-semibold mb-4">Step 1: Sign Up</h2>
+                        <p class="text-gray-700">Sign up for an account and unlock a world of possibilities. With just a few simple steps, you can join our community and gain access to powerful tools for managing your contacts. Best of all, it's completely free! Take control of your contacts today.</p>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+                        <h2 class="text-xl font-semibold mb-4">Step 2: Create Contacts</h2>
+                        <p class="text-gray-700">Once you've signed up, it's time to start organizing your contacts effortlessly. With our intuitive interface, creating and managing contacts has never been easier. Whether you're adding new contacts or importing existing ones, our platform streamlines the process, allowing you to focus on what matters most - building and nurturing your relationships. Start creating your contact database today and unlock the full potential of Pastel Paradise.</p>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+                        <h2 class="text-xl font-semibold mb-4">Step 3: Access from Anywhere</h2>
+                        <p class="text-gray-700">With Pastel Paradise, your contact management solution is always within reach. Whether you're in the office, working remotely, or on the go, our platform offers seamless access from any device, anywhere in the world. Utilize our web interface from your desktop, access our mobile app on your smartphone, or even manage your contacts offline. Our cloud-based infrastructure ensures that your data is securely stored and synchronized across all your devices, giving you the flexibility and peace of mind to manage your contacts wherever life takes you.</p>
+                    </div>
+
+                </div>
             </div>
-
-            <!-- Card -->
-            <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-                <h2 class="text-xl font-semibold mb-4">Step 2: Create Contacts</h2>
-                <p class="text-gray-700">Once you've signed up, it's time to start organizing your contacts effortlessly. With our intuitive interface, creating and managing contacts has never been easier. Whether you're adding new contacts or importing existing ones, our platform streamlines the process, allowing you to focus on what matters most - building and nurturing your relationships. Start creating your contact database today and unlock the full potential of ContactKeepr.</p>
-            </div>
-
-            <!-- Card -->
-            <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-                <h2 class="text-xl font-semibold mb-4">Step 3: Access from Anywhere</h2>
-                <p class="text-gray-700">With ContactKeepr, your contact management solution is always within reach. Whether you're in the office, working remotely, or on the go, our platform offers seamless access from any device, anywhere in the world. Utilize our web interface from your desktop, access our mobile app on your smartphone, or even manage your contacts offline. Our cloud-based infrastructure ensures that your data is securely stored and synchronized across all your devices, giving you the flexibility and peace of mind to manage your contacts wherever life takes you.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
         <!-- Development Banner -->
-        <section class="bg-gradient-to-b from-cyan-500 to-cyan-700 text-white py-12">
+        <section class="relative bg-gradient-to-br from-pink-400 to-purple-400 text-white py-12">
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-semibold mb-2">Development of ContactKeepr</h2>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-2">Development of Pastel Paradise</h2>
                     <p class="text-lg md:text-xl mb-6">Explore the source code on GitHub.</p>
-                    <a href="https://github.com/ekasky/ContactKeepr" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg inline-block transition duration-300 ease-in-out">GitHub Repository</a>
+                    <a href="https://github.com/ekasky/Pastel_Paradise_Contact_Manager" class="cursor-pointer bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300 transition duration-300 ease-in-out">GitHub Repository</a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Form -->
-        <section class="bg-slate-100 py-12">
+        <section class="bg-white py-12">
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8">Contact Us</h2>
                 <form class="max-w-lg mx-auto">
@@ -128,7 +130,7 @@
                         <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter your message"></textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out">Send Message</button>
+                        <button type="submit" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300 transition duration-300 ease-in-out">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -137,16 +139,16 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gradient-to-br from-pink-400 to-purple-400 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
             <div class="text-center md:text-left mb-4 md:mb-0">
-                <p>&copy; 2024 ContactKeepr. All rights reserved.</p>
+                <p>&copy; 2024 Pastel Paradise. All rights reserved.</p>
             </div>
             <div class="text-center md:text-right">
                 <ul class="flex flex-wrap justify-center md:justify-end space-x-4">
-                    <li><a href="#" class="hover:text-blue-500">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-blue-500">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-black">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-black">Contact Us</a></li>
                 </ul>
             </div>
         </div>
