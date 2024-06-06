@@ -14,7 +14,7 @@ http://pastelparadise.xyz
 - [Project Manager: Kasky, Evan](https://github.com/ekasky/)
 - [Frontend: Belal, Sara](https://github.com/stannie64)
 - [API: Docteur, Daryl]()
-- [Database: Nguyen, Andrew]()
+- [Database: Nguyen, Andrew](https://github.com/anguyen0)
 - [Frontend: Rivera Hernandez, Tabbatha]()
 - [API: Vaden, Noah](https://github.com/Vryllon/)
 
