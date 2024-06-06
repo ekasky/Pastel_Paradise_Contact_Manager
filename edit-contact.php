@@ -41,7 +41,7 @@ catch(Exception $e) {
     <link rel="stylesheet" href="output.css">
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo2_orginal_cropped-transparent-bg_icon.ico">
 </head>
-<body>
+<body class="font-Mochiy font-extralight">
 
     <!-- Navbar Section  -->
 
@@ -56,8 +56,8 @@ catch(Exception $e) {
         <a href="/contacts.php" class="text-sm text-gray-800 hover:text-gray-600">Contacts</a>
         <a href="/settings.html" class="text-sm text-gray-800 hover:text-gray-600">Settings</a>
         <div>
-            <a href="/new-contact.php" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">New Contact</a>
-            <button id="logout-btn" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Logout</button>
+            <a href="/new-contact.php" class="bg-gradient-to-br from-pink-300 to-rose-300 text-pink-800 font-bold px-4 py-2 shadow-md rounded-lg hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">New Contact</a>
+            <button id="logout-btn" class="bg-gradient-to-br from-pink-300 to-rose-300 text-pink-800 font-bold px-4 py-2 shadow-md rounded-lg hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Logout</button>
         </div>
 
     </nav>
@@ -76,11 +76,11 @@ catch(Exception $e) {
 
     </header>
 
-    <section class="flex items-center justify-center h-screen bg-gradient-to-br from-pink-400 to-purple-400 relative">
+    <section class="flex items-center justify-center h-screen bg-gradient-to-br from-pink-300 to-rose-300 relative">
     
-        <div class="absolute inset-0 bg-cover bg-center bg-repeat" style="background-image: url('./assets/bg-redo.png'); background-size: 15%;"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-repeat z-0" style="background-image: url('./assets/bg-redo.png'); background-size: 15%;"></div>
 
-        <div class="max-w-lg mx-auto px-8 py-8 bg-white rounded-lg shadow-md z-0">
+        <div class="max-w-lg mx-auto px-8 py-8 bg-white border-2 border-pink-500 rounded-lg shadow-md z-10">
             
             <h2 class="text-3xl font-semibold mb-4 text-center">Edit Contact</h2>
 
@@ -106,20 +106,24 @@ catch(Exception $e) {
                 </div>
 
                 <div class="mb-4">
+
                     <label for="phone-number" class="block text-gray-800 font-semibold mb-2">Phone Number<span class="text-red-500">*</span></label>
                     <input type="text" id="phone-number" name="phone-number" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter phone number">
                     <div id="phone-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">Phone number required *</div>
+                
                 </div>
 
                 <div class="mb-4">
+
                     <label for="email" class="block text-gray-800 font-semibold mb-2">Email<span class="text-red-500">*</span></label>
                     <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring focus:border-blue-500" placeholder="Enter email">
                     <div id="email-error" class=" text-xs pl-4 pt-1 text-red-500 hidden">Email address required *</div>
+                
                 </div>
 
                 <div class="text-center">
 
-                    <button type="submit" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Update Contact</button>
+                    <button type="submit" class="bg-gradient-to-br from-pink-300 to-rose-300 text-pink-800 font-semibold py-3 px-8 hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 rounded-lg shadow-lg transition duration-300 ease-in-out">Update Contact</button>
                 
                 </div>
 
