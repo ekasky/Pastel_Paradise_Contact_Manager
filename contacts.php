@@ -43,7 +43,7 @@ catch(Exception $e) {
     <link rel="icon" type="image/x-icon" href="./assets/logos/logo2_orginal_cropped-transparent-bg_icon.ico">
 </head>
 
-<body class="relative">
+<body class="relative font-Mochiy font-extralight">
     
     <!-- Navbar Section  -->
 
@@ -58,8 +58,8 @@ catch(Exception $e) {
         <a href="/contacts.php" class="text-sm text-gray-800 hover:text-gray-600">Contacts</a>
         <a href="/settings.html" class="text-sm text-gray-800 hover:text-gray-600">Settings</a>
         <div>
-            <a href="/new-contact.php" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">New Contact</a>
-            <button id="logout-btn" class="bg-gradient-to-br from-pink-400 to-purple-400 text-white font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Logout</button>
+            <a href="/new-contact.php" class="bg-gradient-to-br from-pink-300 to-rose-300 text-pink-800 font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">New Contact</a>
+            <button id="logout-btn" class="bg-gradient-to-br from-pink-300 to-rose-300 text-pink-800 font-bold px-4 py-2 shadow-md rounded-lg hover:bg-gradient-to-br hover:from-pink-300 hover:to-purple-300 focus:bg-gradient-to-br focus:from-pink-300 focus:to-purple-300">Logout</button>
         </div>
 
     </nav>
@@ -78,10 +78,10 @@ catch(Exception $e) {
 
     </header>
 
-    <main class="bg-gradient-to-br from-pink-400 to-purple-400 py-8 mt-8">
+    <main class="bg-gradient-to-br from-pink-300 to-rose-300 py-8 mt-8">
 
         <div class="m-8">
-            <h1 class="flex items-center justify-center text-2xl font-bold text-white"><?php echo $first_name ?>'s Contacts</h1>
+            <h1 class="flex items-center justify-center text-2xl mb-2 text-pink-800"><?php echo $first_name ?>'s Contacts</h1>
         </div>
 
         <!-- Search bar -->
